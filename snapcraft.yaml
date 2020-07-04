@@ -9,9 +9,11 @@ base: core18
 grade: stable
 confinement: strict
 
+license: Apache-2.0
+
 apps:
   spdtest:
-    command: /bin/sh spdtest.sh
+    command: $SNAP/bin/sh spdtest.sh
     environment:
       LC_ALL: C.UTF-8
     plugs:
