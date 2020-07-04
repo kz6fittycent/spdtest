@@ -11,14 +11,14 @@ confinement: strict
 
 apps:
   spdtest:
-    command: sh $SNAP/bin/spdtest.sh
+    command: /bin/sh $SNAP/bin/spdtest.sh
     environment:
       LC_ALL: C.UTF-8
     plugs:
       - network
       
 parts:
-  solus-iso-downloader:
+  spdtest:
     source: https://github.com/aristocratos/spdtest.sh
     source-type: git
     plugin: nil
