@@ -13,7 +13,7 @@ license: Apache-2.0
 
 apps:
   spdtest:
-    command: spdtest.sh
+    command: sh /bin/spdtest.sh
     environment:
       LC_ALL: C.UTF-8
     plugs:
@@ -42,8 +42,8 @@ parts:
       - mtr
       - less
       
- # publish:
- #   plugin: dump
- #   source: .
- #   organize:
- #     ./spdtest.sh: /bin/spdtest.sh
+  publish:
+    plugin: dump
+    source: .
+    organize:
+      ./spdtest.sh: /bin/spdtest.sh
